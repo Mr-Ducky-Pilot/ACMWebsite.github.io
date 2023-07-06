@@ -1,0 +1,191 @@
+section h3 {
+    font-size: 60px;
+    align-self: start;
+    text-align: left;
+    justify-self: flex-start;
+    vertical-align: text-top;
+    z-index: 0;
+}
+
+
+/* Make the image responsive */
+
+.image-container {
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: space-evenly;
+    z-index: 999;
+}
+
+.image-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    max-width: calc(50%-20px);
+    text-align: center;
+}
+
+.image-wrapper img {
+    max-width: 100%;
+    padding-left: 15%;
+    padding-right: 15%;
+    border-radius: 50%;
+    margin-top: 25%;
+    height: auto;
+    cursor: pointer;
+}
+
+.image-wrapper h2 {
+    margin-top: 5px;
+    font-size: 28px;
+    text-align: center;
+}
+
+
+.section img:hover {
+    opacity: 0.7;
+}
+
+
+
+/* The Modal (background) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* Modal Content (image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 80%;
+    max-height: 80%;
+    object-fit: contain;
+}
+
+/* Add Animation */
+.modal-content,
+#caption {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {
+        -webkit-transform: scale(0)
+    }
+
+    to {
+        -webkit-transform: scale(1)
+    }
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0)
+    }
+
+    to {
+        transform: scale(1)
+    }
+}
+
+/* Caption of Modal Image */
+#caption {
+    text-align: center;
+    color: #ccc;
+    font-size: 22px;
+    padding: 10px 0;
+}
+
+/* Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Close Button Hover */
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+}
+
+/* Add Animation */
+.modal-content,
+#caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+/* Set image height for large screens */
+@media only screen and (min-width: 501px) {
+    .section img {
+        max-height: 400px;
+    }
+}
+
+/* Adjust styles for small screens */
+@media only screen and (max-width: 500px) {
+    .section img {
+        margin-top: 30%;
+        height: auto;
+        z-index: 999;
+    }
+
+    .section h3 {
+        font-size: 30px;
+        /* padding: 2%; */
+        align-self: start;
+        text-align: left;
+        vertical-align: text-top;
+        z-index: 0;
+    }
+
+    .section {
+        min-height: 80vh;
+        display: flex;
+        padding: 2%;
+        margin-bottom: 20px;
+        justify-content: center;
+        /* align-items: center; */
+    }
+
+    .image-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        z-index: 999;
+    }
+
+    /* Adjust modal padding for small screens */
+    .modal {
+        padding-top: 150px;
+    }
+
+    /* Adjust caption font size for small screens */
+    #caption {
+        font-size: 28px;
+    }
+
+    /* Adjust close button size for small screens */
+    .close {
+        font-size: 30px;
+    }
+}
