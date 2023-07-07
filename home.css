@@ -65,13 +65,25 @@ section p {
     section h1 {
         font-size: 40px;
     }
-    .logo_banner {
+/*     .logo_banner {
     width: 60%;
     height: 60%;
     transform-style: preserve-3d;
     transition: all 5s ease-out;
     transform: rotate3d(360deg);
-}
+} */
+        .logo_banner {
+        width: 60%;
+        height: 60%;
+        transform-style: preserve-3d;
+        transition: all 5s ease-out;
+        transform: rotate3d(1, 1, 1, 360deg);
+    }
+
+    .logo_banner:hover,
+    .logo_banner:active {
+        transform: rotate3d(0, 0, 0, 360deg);
+    }
 }
 
 .reveal {
